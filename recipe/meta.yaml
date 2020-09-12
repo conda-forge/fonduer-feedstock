@@ -1,18 +1,18 @@
 {% set name = "fonduer" %}
-{% set version = "0.8.2" %}
+{% set version = "0.8.3" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 499644f1648832cddf271416bb9c0cad7baa2300bb38d735892a410d8cf8e71b
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 485665af1901cd5ab2f76094ab1206e69e21e4e5ba69f961505fbc434e0ae28b
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -37,6 +37,7 @@ requirements:
     - treedlib >=0.1.1
     - wand >=0.4.4
     - tensorboardx
+    - deprecation
 
 test:
   imports:
@@ -64,10 +65,10 @@ about:
   home: https://github.com/HazyResearch/fonduer
   license: MIT
   license_family: MIT
-  license_file: LICENSE 
-  summary: "Fonduer is a Python package and framework for building knowledge base construction (KBC) applications from richly formatted data."
+  license_file: LICENSE
+  summary: Fonduer is a Python package and framework for building knowledge base construction (KBC) applications from richly formatted data.
   doc_url: https://fonduer.readthedocs.io/
-  dev_url: https://github.com/HazyResearch/fonduer 
+  dev_url: https://github.com/HazyResearch/fonduer
 
 extra:
   recipe-maintainers:
