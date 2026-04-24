@@ -1,5 +1,5 @@
 {% set name = "fonduer" %}
-{% set version = "0.8.3" %}
+{% set version = "0.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 485665af1901cd5ab2f76094ab1206e69e21e4e5ba69f961505fbc434e0ae28b
+  sha256: fdbedcdb78143e7e9867d38c14fc65357c01b886786763f2b163eb8773bbfce4
 
 build:
   noarch: python
